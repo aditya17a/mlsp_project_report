@@ -1,1 +1,8 @@
 \section{Introduction}
+One of the most studied areas in the field of Artificial Intelligence is teaching computers to play games. Recently, DeepMind has trained a network to successfully play classic Atari video games using high-dimensional sensory inputs with end-to-end reinforcement learning, which is human-like experience-based strategy.[1][2]
+
+Our team was interested in expanding on the work of DeepMind by developing a network that would learn to play a game that is adversarial, specifically playing against an opponent that has the same capabilities as the network and has a winning/losing condition, as opposed to simply trying to maximize a running score.
+
+For our approach, we attempted to create a network that learns to play games similar to how humans learn to play games.[3] That is, first, play the game in a way to best figure out the rules of the game. Next, learn the optimal strategy to become good at playing the game. 
+
+We chose Connect Four as the game for this project as it meets both these conditions and is relatively easy to model. Although we have chosen Connect Four as our game, this method should be generalizable to many different types of games including ones where search and other techniques perform poorly.

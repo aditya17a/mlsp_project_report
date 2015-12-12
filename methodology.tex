@@ -20,3 +20,10 @@ The output is represented by a $H$X$W$ matrix. Valid moves are indicated by the 
 The RL network maps the input tensor to the output matrix. The network has an input layer with $H$X$W$X$3$ units, a single 50-unit fully-connected hidden layer with a $tanh$ activation function, and a fully connected $tanh$ output layer with $H$X$W$ units. More information about the train and test process is given in section 3.
 
 \subsection{Strategy Learner}
+Similiar to DeepMind we used a convolutional neural network to train the Strategy Learner. This network consists of an input layer which takes in the state of the board and the valid moves from the rule learner. This then goes to a single convolution layer with filters of size 4 by 4. From there we enter into a fully connected layer with 64 nodes and finally to the output layer with 7 nodes, 1 for each column. A graphical representation of the network can be seen in Figure \ref{fig:strat_learn}.
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{Network1.png}
+  \caption{Strategy Learner network structure}
+  \label{fig:strat_learn}
+\end{figure}
